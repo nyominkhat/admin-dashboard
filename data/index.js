@@ -1,112 +1,68 @@
-export const data = {
-  dec: [
-    {
-      name: "1 Dec",
-      sale: 30000,
-    },
-    {
-      name: "2 Dec",
-      sale: 50000,
-    },
-    {
-      name: "3 Dec",
-      sale: 40000,
-    },
-    {
-      name: "4 Dec",
-      sale: 60000,
-    },
-    {
-      name: "5 Dec",
-      sale: 100000,
-    },
-  ],
-  jan: [
-    {
-      name: "1 Jan",
-      sale: 40000,
-    },
-    {
-      name: "2 Jan",
-      sale: 50000,
-    },
-    {
-      name: "3 Jan",
-      sale: 30000,
-    },
-    {
-      name: "4 Jan",
-      sale: 60000,
-    },
-    {
-      name: "5 Jan",
-      sale: 105000,
-    },
-  ],
-  feb: [
-    {
-      name: "1 Feb",
-      sale: 20000,
-    },
-    {
-      name: "2 Feb",
-      sale: 40000,
-    },
-    {
-      name: "3 Feb",
-      sale: 60000,
-    },
-    {
-      name: "4 Feb",
-      sale: 80000,
-    },
-    {
-      name: "5 Feb",
-      sale: 100000,
-    },
-  ],
-  mar: [
-    {
-      name: "1 Mar",
-      sale: 256000,
-    },
-    {
-      name: "2 Mar",
-      sale: 500000,
-    },
-    {
-      name: "3 Mar",
-      sale: 400000,
-    },
-    {
-      name: "4 Mar",
-      sale: 600000,
-    },
-    {
-      name: "5 Mar",
-      sale: 805000,
-    },
-  ],
-  apr: [
-    {
-      name: "1 April",
-      sale: 300000,
-    },
-    {
-      name: "2 April",
-      sale: 500000,
-    },
-    {
-      name: "3 April",
-      sale: 400000,
-    },
-    {
-      name: "4 April",
-      sale: 600000,
-    },
-    {
-      name: "5 April",
-      sale: 1000000,
-    },
-  ],
-};
+export const chart_data = [
+  {
+    id: 1,
+    year: 2016,
+    userGain: 80000,
+    userLost: 823,
+  },
+  {
+    id: 2,
+    year: 2017,
+    userGain: 45677,
+    userLost: 345,
+  },
+  {
+    id: 3,
+    year: 2018,
+    userGain: 78888,
+    userLost: 555,
+  },
+  {
+    id: 4,
+    year: 2019,
+    userGain: 90000,
+    userLost: 4555,
+  },
+  {
+    id: 5,
+    year: 2020,
+    userGain: 43000,
+    userLost: 234,
+  },
+  {
+    id: 6,
+    year: 2021,
+    userGain: 40000,
+    userLost: 500,
+  },
+  {
+    id: 7,
+    year: 2022,
+    userGain: 60000,
+    userLost: 1000,
+  },
+  {
+    id: 8,
+    year: 2023,
+    userGain: 50000,
+    userLost: 500,
+  },
+];
+
+export const top_card_data = [
+  {
+    label: "Daily Revenue",
+    price: "7,586",
+    percent: "15",
+  },
+  {
+    label: "YTD Revenue",
+    price: "5,245,657",
+    percent: "40",
+  },
+  {
+    label: "Customers",
+    price: "11,445",
+    percent: "18",
+  },
+];

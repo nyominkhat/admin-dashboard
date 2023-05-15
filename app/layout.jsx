@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
-        <body className="w-screen h-screen ">
+        <body suppressHydrationWarning={true} className="w-screen h-screen ">
           <main className="flex w-full h-full overflow-hidden select-none">
             {/* sidebar */}
             <aside className="h-full">

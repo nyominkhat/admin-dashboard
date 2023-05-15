@@ -1,62 +1,60 @@
-"use client";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Bar } from "react-chartjs-2";
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
   Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+  Legend,
+} from "chart.js";
+import { chart_data } from "@/data";
 
-import { data } from "@/data";
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
-export default function Barchart({ month }) {
-  let selectedData;
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: {
+      display: true,
+      text: "User Blah",
+    },
+  },
+};
 
-  switch (month) {
-    case "dec":
-      selectedData = data.dec;
-      break;
-    case "jan":
-      selectedData = data.jan;
-      break;
-    case "feb":
-      selectedData = data.feb;
-      break;
-    case "mar":
-      selectedData = data.mar;
-      break;
-    case "apr":
-      selectedData = data.apr;
-      break;
-    default:
-      selectedData = [];
-  }
+const labels = chart_data.map((data) => data.year);
 
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: "User Gain",
+      data: chart_data.map((data) => data.userGain),
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+    {
+      label: "User Lost",
+      data: chart_data.map((data) => data.userLost),
+      backgroundColor: "rgba(53, 162, 235, 0.5)",
+    },
+  ],
+};
+
+export default function BarChart() {
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <BarChart
-        width={150}
-        height={40}
-        data={selectedData}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Bar dataKey="sale" fill="#8884d8" />
-      </BarChart>
-    </ResponsiveContainer>
+    <>
+      <Bar data={data} options={options} />
+    </>
   );
 }
-
-
