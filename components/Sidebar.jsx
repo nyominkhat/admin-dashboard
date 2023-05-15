@@ -47,7 +47,7 @@ export default function Sidebar() {
     <section
       className={`${
         openMenu ? "w-72" : "w-20"
-      } bg-[#191919] text-slate-300 h-screen p-5 pt-8 relative duration-300`}
+      } bg-[#191919] text-slate-300 h-screen p-5 pt-6 relative duration-300`}
     >
       {/*  */}
       <div className="flex items-center w-full overflow-hidden gap-x-3">
@@ -94,7 +94,7 @@ export default function Sidebar() {
       {/* menu open btn */}
       <figure
         onClick={handleOpenMenu}
-        className={`absolute top-9 -right-4 shadow-md hover:shadow-xl hover:scale-110 cursor-pointer border border-white bg-white rounded-full w-8 h-8 flex items-center justify-center duration-200 text-[#191919] ${
+        className={`absolute top-7 -right-4 shadow-md hover:shadow-xl hover:scale-110 cursor-pointer border border-slate-300 bg-[#191919] rounded-full w-8 h-8 flex items-center justify-center duration-200 text-inherit ${
           !openMenu && "rotate-180"
         } `}
       >
