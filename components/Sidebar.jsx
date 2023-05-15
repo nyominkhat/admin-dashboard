@@ -83,7 +83,7 @@ export default function Sidebar() {
             <p
               className={`${
                 !openMenu && "hidden"
-              } origin-left duration-300 text-slate-100`}
+              } origin-left duration-1000  text-slate-100`}
             >
               {menu.title}
             </p>
@@ -94,7 +94,7 @@ export default function Sidebar() {
       {/* menu open btn */}
       <figure
         onClick={handleOpenMenu}
-        className={`absolute top-9 -right-4 shadow-md hover:shadow-xl hover:scale-105 cursor-pointer border border-white bg-white rounded-full w-8 h-8 flex items-center justify-center duration-200 text-black ${
+        className={`absolute top-9 -right-4 shadow-md hover:shadow-xl hover:scale-110 cursor-pointer border border-white bg-white rounded-full w-8 h-8 flex items-center justify-center duration-200 text-[#191919] ${
           !openMenu && "rotate-180"
         } `}
       >
