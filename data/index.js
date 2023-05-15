@@ -1,3 +1,5 @@
+import { faker } from "@faker-js/faker";
+
 export const chart_data = [
   {
     id: 1,
@@ -41,12 +43,6 @@ export const chart_data = [
     userGain: 60000,
     userLost: 1000,
   },
-  {
-    id: 8,
-    year: 2023,
-    userGain: 50000,
-    userLost: 500,
-  },
 ];
 
 export const top_card_data = [
@@ -66,3 +62,20 @@ export const top_card_data = [
     percent: "18",
   },
 ];
+
+// recent data
+export let recent_req_data = Array.apply(null, Array(10));
+
+recent_req_data.forEach((e, index) => {
+  recent_req_data[index] = {
+    id: faker.string.uuid(),
+    customer: {
+      img: faker.image.avatarLegacy(),
+      name: faker.internet.userName(),
+    },
+    purchase_date: faker.date.weekday(),
+    purchase_id: faker.number.int({ min: 1000000000, max: 9999999999 }),
+  };
+
+  return recent_req_data;
+});

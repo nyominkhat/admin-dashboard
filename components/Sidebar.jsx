@@ -79,7 +79,7 @@ export default function Sidebar() {
             <p
               className={`${
                 !openMenu && "hidden"
-              } origin-left duration-1000  text-slate-100`}
+              } origin-left duration-100  text-slate-100`}
             >
               {menu.title}
             </p>
