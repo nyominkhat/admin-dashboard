@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import { MdSpaceDashboard, MdChat } from "react-icons/md";
 import { RiAccountBoxFill, RiSettingsLine } from "react-icons/ri";
@@ -32,10 +32,6 @@ const menus = [
   { title: "Setting", icon: <RiSettingsLine size={28} />, path: "/setting" },
 ];
 
-//  ${
-//               asPath === menu.path && "border"
-//             }
-
 export default function Sidebar() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -56,7 +52,7 @@ export default function Sidebar() {
             !openMenu && "rotate-[360deg]"
           } `}
         >
-          <img className="w-full h-full" src="./images/logo.png" />
+          <img className="object-cover w-full h-full" src="./images/logo.png" />
         </figure>
 
         <h1
@@ -94,7 +90,7 @@ export default function Sidebar() {
       {/* menu open btn */}
       <figure
         onClick={handleOpenMenu}
-        className={`absolute top-7 -right-4 shadow-md hover:shadow-xl hover:scale-110 cursor-pointer border border-slate-300 bg-[#191919] rounded-full w-8 h-8 flex items-center justify-center duration-200 text-inherit ${
+        className={`absolute top-7 -right-4 shadow-md hover:shadow-xl hover:scale-110 cursor-pointer border border-slate-300 bg-[#191919] rounded-full w-8 h-8 flex items-center justify-center duration-200 text-slate-100 ${
           !openMenu && "rotate-180"
         } `}
       >
