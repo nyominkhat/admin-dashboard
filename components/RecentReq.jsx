@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { recent_req_data } from "@/data";
 
 export default function RecentReq() {
+  const [data, setData] = useState([]);
   console.log(recent_req_data);
+
+  useEffect(() => {
+    setData(recent_req_data);
+  }, []);
 
   return (
     <>
@@ -15,7 +20,7 @@ export default function RecentReq() {
         </button>
       </div>
 
-      <table class="border-separate w-full border-spacing-y-3 px-5">
+      <table className="w-full px-5 border-separate border-spacing-y-3">
         <thead>
           <tr>
             <th className="p-2 text-start text-slate-600">Customers</th>
@@ -24,7 +29,7 @@ export default function RecentReq() {
           </tr>
         </thead>
         <tbody className="border border-slate-500">
-          {recent_req_data.map((item, index) => (
+          {data.map((item, index) => (
             <tr key={item.id}>
               <td className="relative flex items-center gap-5 p-2 text-start">
                 <span className="absolute -left-5 font-medium text-[#191919]">
