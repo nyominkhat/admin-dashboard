@@ -7,7 +7,7 @@ import Paginate from "./Paginate";
 
 export default function Users() {
   const [data, setData] = useState([]);
-  const [usersPerPage, setUsersPerPage] = useState(7);
+  const [usersPerPage, setUsersPerPage] = useState(8);
 
   useEffect(() => {
     setData(recent_req_data);
