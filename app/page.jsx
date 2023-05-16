@@ -4,6 +4,7 @@ import BarChart from "@/components/BarChart";
 import Map from "@/components/map";
 import RecentReq from "@/components/RecentReq";
 import Topcard from "@/components/Topcard";
+import Users from "@/components/Users";
 import { top_card_data } from "@/data";
 
 export default function Home() {
@@ -16,10 +17,10 @@ export default function Home() {
         ))}
       </section>
 
-      {/* charts section and recent req section */}
-      <section className="grid w-full grid-cols-3 grid-rows-2 gap-5 mt-10 lg:h-[80vh]">
+      {/* charts section, recent req section and map */}
+      <section className="grid w-full grid-cols-3 grid-rows-4 lg:grid-rows-2 gap-5 mt-10 lg:h-[80vh]">
         {/* chart */}
-        <div className="flex items-center w-full col-span-3 p-4 border rounded-md shadow-sm m-auto h-[30vh] lg:h-full justify-cent1er lg:col-span-1 border-slate-300 row-span-1">
+        <div className="flex items-center w-full h-full col-span-3 row-span-1 p-2 border rounded-md shadow-sm justify-cent1er lg:col-span-1 border-slate-300">
           <BarChart />
         </div>
 
@@ -29,9 +30,14 @@ export default function Home() {
         </div>
 
         {/* map */}
-        <section className="col-span-1 row-span-1 p-2 overflow-hidden border rounded-md shadow-sm border-slate-300">
+        <div className="lg:col-span-1 col-span-3 row-span-1 p-2 overflow-hidden w-full border rounded-md shadow-sm border-slate-300 h-[30vh] lg:h-full">
           <Map />
-        </section>
+        </div>
+      </section>
+
+      {/* users */}
+      <section className="relative w-full p-4 overflow-x-auto border rounded-md shadow-sm lg:my-10">
+        <Users />
       </section>
     </main>
   );

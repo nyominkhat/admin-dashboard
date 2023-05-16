@@ -7,7 +7,7 @@ export default function RecentReq() {
   console.log(recent_req_data);
 
   useEffect(() => {
-    setData(recent_req_data);
+    setData(recent_req_data.slice(0, 10));
   }, []);
 
   return (
@@ -20,7 +20,7 @@ export default function RecentReq() {
         </button>
       </div>
 
-      <table className="w-full px-5 border-separate border-spacing-y-3">
+      <table className="w-full px-5 mt-4 border-separate border-spacing-y-3">
         <thead>
           <tr>
             <th className="p-2 text-start text-slate-600">Customers</th>
@@ -30,10 +30,13 @@ export default function RecentReq() {
         </thead>
         <tbody className="border border-slate-500">
           {data.map((item, index) => (
-            <tr key={item.id}>
+            <tr
+              className="transition-all duration-300 rounded-md cursor-pointer hover:shadow-md"
+              key={item.id}
+            >
               <td className="relative flex items-center gap-5 p-2 text-start">
                 <span className="absolute -left-5 font-medium text-[#191919]">
-                  {index + 1}.
+                  {item.id}.
                 </span>
                 <img
                   className="object-cover rounded-full max-w-[2.5rem] max-h-[2.5rem]"
